@@ -10,14 +10,14 @@ public class AprendizajeAritmetico {
         Scanner sc = new Scanner(System.in);
         SecureRandom random = new SecureRandom();
 
-        String[] respuestasPositivas = {"Muy bien!", "Excelente!", "Buen trabajo!", "Sigue así!"};
-        String[] respuestasNegativas = {"No. Por favor intenta de nuevo.", "Incorrecto. Intenta una vez más.", "¡No te rindas aún!", "No. Sigue intentando."};
+        String[] respuestasPositivas = {"¡Muy bien!", "¡Excelente!", "¡Buen trabajo!", "¡Sigue así!"};
+        String[] respuestasNegativas = {"No está correcto. Por favor intenta de nuevo.", "Incorrecto. Intenta una vez más.", "¡No te rindas aún!", "¡Incorrecto pero sigue intentando!."};
 
         int respuestasCorrectas = 0;
         int totalPreguntas = 0;
 
         while (respuestasCorrectas < 10) {
-            System.out.println("Elige el nivel de dificultad: (1 para números de un dígito, 2 para números de dos dígitos, etc.)");
+            System.out.println("Elige el nivel de dificultad: (1 para números de UN dígito, 2 para números de DOS dígitos, y así sucesivamente.)");
             int nivel = sc.nextInt();
 
             System.out.println("Elige el tipo de problema aritmético: (1 para suma, 2 para resta, 3 para multiplicación, 4 para división, 5 para aleatorio)");
@@ -67,7 +67,7 @@ public class AprendizajeAritmetico {
             if (porcentajeCorrecto < 75 && totalPreguntas >= 10) {
                 System.out.println("Por favor, deberías pedir ayuda adicional a tu instructor.");
             } else if (porcentajeCorrecto >= 75 && respuestasCorrectas == 10) {
-                System.out.println("Felicitaciones, ahora si estás listo para pasar al siguiente nivel!");
+                System.out.println("Felicidades, ahora si estás listo para pasar al siguiente nivel!");
                 break;
             }
         }
